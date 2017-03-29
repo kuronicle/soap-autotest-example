@@ -188,9 +188,7 @@
          <password>mot</password>\r
       </sam:login>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="29ce0950-6edc-4857-926e-f8e1a89b51fc" name="XPath Match"><con:configuration><path>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace sam='http://www.soapui.org/sample/';
-//sam:loginResponse/sessionid</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="60529a19-c9da-48a7-be1d-e704c353fd8b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase0001-server" searchProperties="true"><con:settings/><con:testStep type="mockresponse" name="SOAP Mock Response" id="bb806420-291b-4ae1-9e67-90825f979ad3"><con:settings/><con:config xsi:type="con:MockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SampleServiceSoapBinding</con:interface><con:operation>login</con:operation><con:path>/tc0001</con:path><con:port>8089</con:port><con:response id="2dbe702a-3d97-4c87-bf82-fd2187b331a0"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="60529a19-c9da-48a7-be1d-e704c353fd8b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase0001-server" searchProperties="true"><con:settings/><con:testStep type="mockresponse" name="SOAP Mock Response" id="bb806420-291b-4ae1-9e67-90825f979ad3"><con:settings/><con:config xsi:type="con:MockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SampleServiceSoapBinding</con:interface><con:operation>login</con:operation><con:path>/tc0001</con:path><con:port>8089</con:port><con:response id="2dbe702a-3d97-4c87-bf82-fd2187b331a0"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
    <soapenv:Header/>
    <soapenv:Body>
       <sam:loginResponse>
@@ -215,7 +213,7 @@ declare namespace sam='http://www.soapui.org/sample/';
    <soapenv:Header/>
    <soapenv:Body>
       <sam:loginResponse>
-         <sessionid>?</sessionid>
+         <sessionid>1</sessionid>
       </sam:loginResponse>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/login"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="logout" id="a783732b-3c2f-4446-823a-daeeae981c97" interface="SampleServiceSoapBinding" operation="logout"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="0df0a712-0b74-40bc-a7e4-9c9607b5e62a" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">

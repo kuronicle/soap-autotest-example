@@ -23,11 +23,14 @@ public class IF0001Test {
 		TestCase testCaseServer = testSuite.getTestCaseByName("TestCase0001-server");
 		TestCase testCaseClient = testSuite.getTestCaseByName("TestCase0001-client");
 
-		TestRunner runnerClient = testCaseClient.run(new PropertiesMap(), true);
-		Thread.sleep(10000);
+		TestRunner runnerServer = testCaseServer.run(new PropertiesMap(), true);
 
-		TestRunner runnerServer = testCaseServer.run(new PropertiesMap(), false);
-		runnerClient.waitUntilFinished();
+		while (runnerServer.getStatus().equals(Status.INITIALIZED)) {
+			System.out.println("wait initializing server.");
+			Thread.sleep(1000);
+		}
+
+		TestRunner runnerClient = testCaseClient.run(new PropertiesMap(), false);
 
 		System.out.println(runnerServer.getReason());
 
